@@ -1,0 +1,28 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+body {
+  background-color: #fcfcfc;
+  font-family: Open Sans,-apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,Segoe UI,Arial,Roboto,PingFang SC,miui,Hiragino Sans GB,Microsoft Yahei,sans-serif;;
+}
+ul, li, ol {
+  list-style: none;
+}
+@font-face {
+  font-family: 'iconfont';  /* Project id 4012364 */
+  src: url('//at.alicdn.com/t/c/font_4012364_uk4bh9gd8z.woff2?t=1681390551282') format('woff2'),
+       url('//at.alicdn.com/t/c/font_4012364_uk4bh9gd8z.woff?t=1681390551282') format('woff'),
+       url('//at.alicdn.com/t/c/font_4012364_uk4bh9gd8z.ttf?t=1681390551282') format('truetype');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

@@ -1,19 +1,29 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 
 const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    component: () => import(/* webpackChunkName: "home" */ '@/views/home/index.vue'),
+    meta: {
+      index: 0
+    }
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    path: '/setting',
+    name: 'setting',
+    component: () => import(/* webpackChunkName: "setting" */ '@/views/setting/index.vue'),
+    meta: {
+      index: 1
+    }
+  },
+  {
+    path: '/setting-detailed',
+    name: 'setting-detailed',
+    component: () => import(/* webpackChunkName: "setting-detailed" */ '@/views/setting/secondarySetting'),
+    meta: {
+      index: 2
+    }
   }
 ]
 
@@ -21,5 +31,18 @@ const router = createRouter({
   history: createWebHashHistory(),
   routes
 })
+
+// 导航首位
+// router.beforeEach((to, from, next) => {
+//   console.log('to', to)
+//   console.log('from', from)
+  
+//   if (to.name = 'setting-detailed') {
+//     document.body.classList.add('slidee-back')
+//   } else {
+//     document.body.classList.remove('slidee-back')
+//   }
+//   next()
+// })
 
 export default router
